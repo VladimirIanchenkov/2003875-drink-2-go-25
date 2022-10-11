@@ -96,26 +96,26 @@
 
       <section class="advantages">
         <h2 class="advantages__title heading-primary">Преимущества</h2>
-        <p class="advantages__moto heading-secondary">Главные причины выбрать Drink2Go</p>
+        <p class="advantages__subtitle heading-secondary">Главные причины выбрать Drink2Go</p>
         <ul class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__icon advantages__icon--speed"></div>
-            <h3 class="advantages__subtitle heading-secondary">Скорость</h3>
+            <h3 class="advantages__product-title heading-secondary">Скорость</h3>
             <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
           <li class="advantages__item">
             <div class="advantages__icon advantages__icon--comfort"></div>
-            <h3 class="advantages__subtitle heading-secondary">Удобство</h3>
+            <h3 class="advantages__product-title heading-secondary">Удобство</h3>
             <p class="advantages__description">Легко помещается и в карман,<br> и в маленькую сумочку</p>
           </li>
           <li class="advantages__item">
             <div class="advantages__icon advantages__icon--energy"></div>
-            <h3 class="advantages__subtitle heading-secondary">Бодрость</h3>
+            <h3 class="advantages__product-title heading-secondary">Бодрость</h3>
             <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
           </li>
           <li class="advantages__item">
             <div class="advantages__icon advantages__icon--ecology"></div>
-            <h3 class="advantages__subtitle heading-secondary">Экологичность</h3>
+            <h3 class="advantages__product-title heading-secondary">Экологичность</h3>
             <p class="advantages__description">Вся упаковка сделана из перерабатываемых материалов</p>
           </li>
         </ul>
@@ -124,7 +124,7 @@
       <article class="main-catalog">
         <div class="main-catalog__container">
           <h1 class="main-catalog__title heading-primary">Каталог</h1>
-          <p class="main-catalog__moto heading-secondary">Каталог кофейных напитков</p>
+          <p class="main-catalog__subtitle heading-secondary">Каталог кофейных напитков</p>
           <section class="main-catalog__filters filters">
             <h2 class="visually-hidden">Фильтры</h2>
             <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
@@ -132,7 +132,7 @@
                 <legend class="filters__title">Цена</legend>
                 <div class="filters__range range">
                   <div class="range__scale">
-                    <div class="range__bar" style="left: 0;" width="242">
+                    <div class="range__bar" style="left: 12px; width: 242px">
                       <button class="range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
@@ -143,81 +143,82 @@
                   </div>
                   <div class="range__input-container">
                     <label class="visually-hidden" for="min-price">от</label>
-                    <input class="range-input" id="min-price" type="number" value="0" name="min-price">
+                    <input class="range__input" id="min-price" type="number" name="min-price" min="0" max="10000" placeholder="0">
+                    <span class="range__input-dash"></span>
                     <label class="visually-hidden" for="max-price">до</label>
-                    <input class="range-input" id="max-price" type="number" value="900" name="max-price">
+                    <input class="range__input" id="max-price" type="number" value="900" name="max-price" min="0" max="10000">
                   </div>
                 </div>
               </fieldset>
               <fieldset class="filters__group">
                 <legend class="filters__title">Наличие молока</legend>
-                <ul class="filters__list radio-inputs">
-                  <li class="radio-inputs__item">
-                    <label class="radio-inputs__control">
-                      <input class="visually-hidden radio-inputs__control-input" type="radio" name="milk-option" value="any" checked>
-                      <span class="radio-inputs__control-mark"></span>
-                      <span class="radio-inputs__control-label">Неважно</span>
+                <ul class="filters__list additive-filter">
+                  <li class="additive-filter__item">
+                    <label class="additive-filter__control">
+                      <input class="visually-hidden additive-filter__control-input" type="radio" name="milk-option" value="any" checked>
+                      <span class="additive-filter__control-mark"></span>
+                      <span class="additive-filter__control-label">Неважно</span>
                     </label>
                   </li>
-                  <li class="radio-inputs__item">
-                    <label class="radio-inputs__control">
-                      <input class="visually-hidden radio-inputs__control-input" type="radio" name="milk-option" value="dairy">
-                      <span class="radio-inputs__control-mark"></span>
-                      <span class="radio-inputs__control-label">Только животное</span>
+                  <li class="additive-filter__item">
+                    <label class="additive-filter__control">
+                      <input class="visually-hidden additive-filter__control-input" type="radio" name="milk-option" value="dairy">
+                      <span class="additive-filter__control-mark"></span>
+                      <span class="additive-filter__control-label">Только животное</span>
                     </label>
                   </li>
-                  <li class="radio-inputs__item">
-                    <label class="radio-inputs__control">
-                      <input class="visually-hidden radio-inputs__control-input" type="radio" name="milk-option" value="non-dairy">
-                      <span class="radio-inputs__control-mark"></span>
-                      <span class="radio-inputs__control-label">Только растительное</span>
+                  <li class="additive-filter__item">
+                    <label class="additive-filter__control">
+                      <input class="visually-hidden additive-filter__control-input" type="radio" name="milk-option" value="non-dairy">
+                      <span class="additive-filter__control-mark"></span>
+                      <span class="additive-filter__control-label">Только растительное</span>
                     </label>
                   </li>
-                  <li class="radio-inputs__item">
-                    <label class="radio-inputs__control">
-                      <input class="visually-hidden radio-inputs__control-input" type="radio" name="milk-option" value="milk-free" disabled>
-                      <span class="radio-inputs__control-mark"></span>
-                      <span class="radio-inputs__control-label">Без молока</span>
+                  <li class="additive-filter__item">
+                    <label class="additive-filter__control">
+                      <input class="visually-hidden additive-filter__control-input" type="radio" name="milk-option" value="milk-free" disabled>
+                      <span class="additive-filter__control-mark"></span>
+                      <span class="additive-filter__control-label">Без молока</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="filters__group">
                 <legend class="filters__title">Страна произрастания</legend>
-                <ul class="filters__list checkbox-inputs">
-                  <li class="checkbox-inputs__item">
-                    <label class="checkbox-inputs__control">
-                      <input class="visually-hidden checkbox-inputs__control-input" type="checkbox" name="Brasil" checked>
-                      <span class="checkbox-inputs__control-mark"></span>
-                      <span class="checkbox-inputs__control-label">Бразилия</span>
+                <ul class="filters__list origins-filter">
+                  <li class="origins-filter__item">
+                    <label class="origins-filter__control">
+                      <input class="visually-hidden origins-filter__control-input" type="checkbox" name="Brasil" checked>
+                      <span class="origins-filter__control-mark"></span>
+                      <span class="origins-filter__control-label">Бразилия</span>
                     </label>
                   </li>
-                  <li class="checkbox-inputs__item">
-                    <label class="checkbox-inputs__control">
-                      <input class="visually-hidden checkbox-inputs__control-input" type="checkbox" name="Ethiopia">
-                      <span class="checkbox-inputs__control-mark"></span>
-                      <span class="checkbox-inputs__control-label">Эфиопия</span>
+                  <li class="origins-filter__item">
+                    <label class="origins-filter__control">
+                      <input class="visually-hidden origins-filter__control-input" type="checkbox" name="Ethiopia">
+                      <span class="origins-filter__control-mark"></span>
+                      <span class="origins-filter__control-label">Эфиопия</span>
                     </label>
                   </li>
-                  <li class="checkbox-inputs__item">
-                    <label class="checkbox-inputs__control">
-                      <input class="visually-hidden checkbox-inputs__control-input" type="checkbox" name="Columbia">
-                      <span class="checkbox-inputs__control-mark"></span>
-                      <span class="checkbox-inputs__control-label">Колумбия</span>
+                  <li class="origins-filter__item">
+                    <label class="origins-filter__control">
+                      <input class="visually-hidden origins-filter__control-input" type="checkbox" name="Columbia">
+                      <span class="origins-filter__control-mark"></span>
+                      <span class="origins-filter__control-label">Колумбия</span>
                     </label>
                   </li>
-                  <li class="checkbox-inputs__item">
-                    <label class="checkbox-inputs__control">
-                      <input class="visually-hidden checkbox-inputs__control-input" type="checkbox" name="Costa-Rica">
-                      <span class="checkbox-inputs__control-mark"></span>
-                      <span class="checkbox-inputs__control-label">Коста-Рика</span>
+                  <li class="origins-filter__item">
+                    <label class="origins-filter__control">
+                      <input class="visually-hidden origins-filter__control-input" type="checkbox" name="Costa-Rica">
+                      <span class="origins-filter__control-mark"></span>
+                      <span class="origins-filter__control-label">Коста-Рика</span>
                     </label>
                   </li>
-                  <li class="checkbox-inputs__item">
-                    <label class="checkbox-inputs__control">
-                      <input class="visually-hidden checkbox-inputs__control-input" type="checkbox" name="Peru" disabled>
-                      <span class="checkbox-inputs__control-mark"></span>
-                      <span class="checkbox-inputs__control-label">Перу</span>
+                  <li class="origins-filter__item">
+                    <label class="origins-filter__control">
+                      <input class="visually-hidden origins-filter__control-input" type="checkbox" name="Peru" disabled>
+                      <span class="origins-filter__control-mark"></span>
+                      <span class="origins-filter__control-label">Перу</span>
                     </label>
                   </li>
                 </ul>
@@ -226,7 +227,7 @@
               <button class="filters__button button" type="reset">Сбросить фильтр</button>
             </form>
           </section>
-          <section class="main-catalog__catalog product-cards">
+          <section class="main-catalog__products product-cards">
             <h2 class="visually-hidden">Каталог товаров</h2>
             <div class="product-cards__select">
               <h3 class="product-cards__select-title">Сортировка:</h3>

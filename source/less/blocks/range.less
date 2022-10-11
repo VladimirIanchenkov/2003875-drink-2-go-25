@@ -1,0 +1,110 @@
+.range__scale {
+  position: relative;
+  height: 3px;
+  margin-top: 11px;
+  margin-bottom: 36px;
+  background-color: #e2e2e2;
+}
+
+.range__bar {
+  position: absolute;
+  height: 3px;
+  background-color: #9070ec;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+}
+
+.range__toggle--min {
+  top: -11px;
+  left: -12px;
+}
+
+.range__toggle--max {
+  top: -11px;
+  right: -12px;
+}
+
+.range__toggle:focus::before,
+.range__toggle:hover::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  background-color: @primary;
+  opacity: 0.25;
+}
+
+.range__toggle:active::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  background-color: @primary;
+}
+
+.filters__group:disabled .range__bar {
+  background-color: @grey;
+}
+
+.filters__group:disabled .range__toggle {
+  border: 2px solid @grey;
+  background-color: #f8f8f8;
+  pointer-events: none;
+}
+
+.range__input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range__input {
+  box-sizing: border-box;
+  width: 118px;
+  min-height: 38px;
+  padding: 8px 10px;
+  text-align: center;
+  .montserrat-500;
+  font-size: 16px;
+  line-height: 24px;
+  color: @black;
+  background-color: @white;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  position: relative;
+}
+
+.range__input::placeholder {
+  color: @grey;
+}
+
+.range__input:focus {
+  border-color: #593cac;
+}
+
+.filters__group:disabled .range__input {
+  border-color: #e2e2e2;
+  background-color: #f8f8f8;
+  color: @grey;
+}
+
+.range__input-dash {
+  width: 8px;
+  height: 2px;
+  background-color: @grey;
+}
