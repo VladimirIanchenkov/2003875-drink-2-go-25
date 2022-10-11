@@ -1,0 +1,65 @@
+.origins-filters__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.origins-filters__control {
+  position: relative;
+  display: block;
+  padding-left: 54px;
+  cursor: pointer;
+}
+
+.origins-filters__control-mark {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @grey;
+}
+
+.origins-filters__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: @white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+.origins-filters__control-input:hover:not(.origins-filters__control-input:disabled):not(.origins-filters__control-input:checked) + .origins-filters__control-mark,
+.origins-filters__control-input:focus:not(.origins-filters__control-input:disabled):not(.origins-filters__control-input:checked) + .origins-filters__control-mark {
+  background-color: #7859cf40;
+  border: 2px solid #9070ec;
+}
+
+.origins-filters__control-input:hover:not(.origins-filters__control-input:disabled):not(.origins-filters__control-input:checked) + .origins-filters__control-mark::before,
+.origins-filters__control-input:focus:not(.origins-filters__control-input:disabled):not(.origins-filters__control-input:checked) + .origins-filters__control-mark::before {
+  left: 0;
+  top: 0;
+}
+
+.origins-filters__control-input:checked + .origins-filters__control-mark {
+  background-color: @primary;
+}
+
+.origins-filters__control-input:checked + .origins-filters__control-mark::before {
+  left: auto;
+  right: 2px;
+}
+
+.origins-filters__control-input:disabled + .origins-filters__control-mark {
+  background-color: #e2e2e2;
+}
+
+.origins-filters__control-input:checked:disabled + .origins-filters__control-mark::before {
+  background-color: @grey;
+}
+
+.origins-filters__control-label {
+  font-size: 16px;
+  line-height: 24px;
+}

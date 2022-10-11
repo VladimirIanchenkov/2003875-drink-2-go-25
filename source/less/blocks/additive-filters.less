@@ -1,0 +1,75 @@
+.additive-filters__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.additive-filters__control {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.additive-filters__control-mark {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @grey;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.additive-filters__control-input:hover:not(.additive-filters__control-input:disabled) + .additive-filters__control-mark::before,
+.additive-filters__control-input:focus:not(.additive-filters__control-input:disabled) + .additive-filters__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: @primary;
+  opacity: 0.25;
+  border-radius: 50%;
+  outline: none;
+}
+
+.additive-filters__control-input:hover + .additive-filters__control-mark,
+.additive-filters__control-input:focus + .additive-filters__control-mark {
+  border-color: #9070ec;
+}
+
+.additive-filters__control-input:checked + .additive-filters__control-mark {
+  border-color: @primary;
+}
+
+.additive-filters__control-input:checked + .additive-filters__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: @primary;
+  border-radius: 50%;
+}
+
+.additive-filters__control-input:disabled + .additive-filters__control-mark {
+  border-color: #e2e2e2;
+}
+
+.additive-filters__control-input:checked:disabled + .additive-filters__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+}
+
+.additive-filters__control-label {
+  font-size: 16px;
+  line-height: 24px;
+}

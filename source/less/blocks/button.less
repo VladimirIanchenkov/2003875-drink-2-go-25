@@ -1,0 +1,59 @@
+.button {
+  .montserrat-400;
+  text-align: center;
+  text-decoration: none;
+  color: @white;
+  background-color: @primary;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #9070ec;
+  outline: none;
+}
+
+.button:active {
+  background-color: #593cac;
+}
+
+.button:disabled {
+  background-color: @grey;
+  pointer-events: none;
+}
+
+.button--modified {
+  .montserrat-400;
+  text-align: center;
+  text-decoration: none;
+  color: @primary;
+  background-color: @white;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.button--modified:hover,
+.button--modified:focus {
+  color: @white;
+  background-color: #9070ec;
+  outline: none;
+}
+
+.button--modified:active {
+  background-color: #593cac;
+}
+
+.button--modified:disabled {
+  color: @white;
+  background-color: #e2e2e2;
+  pointer-events: none;
+}
