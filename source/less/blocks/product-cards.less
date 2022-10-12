@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 20px;
 }
 
@@ -39,7 +40,7 @@
 
 .product-cards__select-control:focus,
 .product-cards__select-control:hover {
-  background-color: #f0ebff;
+  background-color: @secondary;
   outline: none;
 }
 
@@ -63,6 +64,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 }
 
 .product-cards__item:not(:last-of-type) {

@@ -1,0 +1,111 @@
+.product-promo {
+  background-color: #f3ebe1;
+}
+
+.product-promo__card {
+  .align-center;
+  width: 280px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.product-promo__image {
+  margin-bottom: 10px;
+}
+
+.product-promo__sticker {
+  .montserrat-700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @primary;
+}
+
+.product-promo__title {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+.product-promo__desription {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.product-promo__container {
+  .align-center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 230px;
+}
+
+.product-promo__container-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-promo__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: @primary;
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+.product-promo__new-price {
+  .montserrat-600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.product-promo__button {
+  width: 114px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.product-promo__slider-button {
+  border: none;
+  background: none;
+  width: 20px;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.product-promo__slider-button--prev {
+  left: -20px;
+}
+
+.product-promo__slider-button--next {
+  right: -20px;
+}
+
+.product-promo__slider-button--prev:hover,
+.product-promo__slider-button--prev:focus {
+  outline: none;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
+}
+
+.product-promo__slider-button--next:hover,
+.product-promo__slider-button--next:focus {
+  outline: none;
+  background: linear-gradient(90deg, #ffffff00 0%, #ffffff 100%);
+}
+
+.product-promo__slider-button--prev:active {
+  background: linear-gradient(90deg, #7859cf40 0%, #7859cf00 100%);
+}
+
+.product-promo__slider-button--next:active {
+  background: linear-gradient(90deg, #7859cf00 0%, #7859cf40 100%);
+}
+
+.product-promo__slider-button:disabled svg {
+  fill: @grey;
+}

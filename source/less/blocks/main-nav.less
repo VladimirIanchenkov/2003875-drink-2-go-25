@@ -21,6 +21,12 @@
   cursor: pointer;
 }
 
+.main-nav__toggle:hover,
+.main-nav__toggle:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
 .main-nav__toggle:active {
   background-color: @secondary;
 }
@@ -41,6 +47,7 @@
 
 .main-nav__container {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   right: calc((100% - 320px) / 2);
   top: 0;

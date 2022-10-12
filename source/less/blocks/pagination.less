@@ -26,6 +26,7 @@
 .pagination__button:focus {
   background-color: #9070ec;
   color: @white;
+  outline: none;
 }
 
 .pagination__button:active {
@@ -42,9 +43,27 @@
   .montserrat-600;
   background: none;
   color: @black;
+  pointer-events: none;
+}
+
+.pagination__button--hidden {
+  visibility: hidden;
 }
 
 .pagination__button:hover svg,
 .pagination__button:focus svg {
   fill: @white;
+}
+
+.pagination__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__button-text {
+  display: none;
 }

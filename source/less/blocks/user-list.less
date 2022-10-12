@@ -17,6 +17,16 @@
   position: relative;
 }
 
+.user-list__link:hover,
+.user-list__link:focus {
+  outline: none;
+}
+
+.user-list__link:hover svg,
+.user-list__link:focus svg {
+  fill: @primary;
+}
+
 .user-list__link:active {
   background-color: @secondary;
 }

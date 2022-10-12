@@ -18,7 +18,7 @@
 
     <header class="main-header">
       <div class="main-header__container">
-        <a class="main-header__logo" >
+        <a class="main-header__logo-link" >
           <svg role="img" aria-label="Интернет-магазин кофейных напитков Дринк Ту Гоу">
             <use class="main-header__logo-image main-header__logo-image--desktop" href="./img/sprite.svg#logo-desktop"></use>
             <use class="main-header__logo-image main-header__logo-image--tablet" href="./img/sprite.svg#logo-tablet"></use>
@@ -50,7 +50,7 @@
             <li class="user-list__item">
               <a class="user-list__link" href="#">
                 <svg width="16" height="16" fill="#333333">
-                  <use class="main-header__logo-image main-header__logo-image--mobile" href="./img/sprite.svg#icon-client"></use>
+                  <use class="user-list__icon-client" href="./img/sprite.svg#icon-client"></use>
                 </svg>
                 <span class="user-list__link-text">Войти</span>
               </a>
@@ -58,7 +58,7 @@
             <li class="user-list__item">
               <a class="user-list__link" href="#">
                 <svg width="16" height="16" fill="#333333">
-                  <use class="main-header__logo-image main-header__logo-image--mobile" href="./img/sprite.svg#icon-basket"></use>
+                  <use class="user-list__icon-basket" href="./img/sprite.svg#icon-basket"></use>
                 </svg>
                 <span class="user-list__link-text">Корзина</span>
               </a>
@@ -74,23 +74,39 @@
     <main class="main-container">
       <h1 class="visually-hidden">Главная страница</h1>
 
-      <section class="product-slider">
-        <h2 class="visually-hidden">Слайдер</h2>
-        <div class="product-slider__card product-card">
+      <section class="product-promo">
+        <h2 class="visually-hidden">Промо-слайдер</h2>
+        <div class="product-promo__card">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
-            <img class="product-card__image" src="img/index-can.png" srcset="img/index-can@2x.png" width="280" height="270" alt="">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x">
+            <img class="product-promo__image" src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт с натуральным фермерским молоком.">
           </picture>
-          <span class="product-card__sticker">Новинка!</span>
-          <h3 class="product-card__title heading">Декаф <br>Флэт Уайт</h2>
-          <p class="product-card__desription">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,что нужно для расслабления после тяжёлого рабочего дня</p>
-          <span class="product-card__old-price">295₽</span>
-          <span class="product-card__old-price">225₽</span>
-          <a class="product-card__button button" href="#">Заказать</a>
+          <span class="product-promo__sticker">Новинка!</span>
+          <h3 class="product-promo__title heading-secondary">Декаф Флэт<br> Уайт</h3>
+          <p class="product-promo__desription">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <div class="product-promo__container">
+            <div class="product-promo__container-inner">
+              <span class="product-promo__old-price">295₽</span>
+              <span class="product-promo__new-price">225₽</span>
+            </div>
+            <a class="product-promo__button button" href="#">Заказать</a>
+          </div>
+          <button class="product-promo__slider-button product-promo__slider-button--prev" type="button">
+            <span class="visually-hidden">Назад</span>
+            <svg width="11" height="20" fill="#7859cf">
+              <use href="./img/sprite.svg#icon-arrow-slider-left"></use>
+            </svg>
+          </button>
+          <button class="product-promo__slider-button product-promo__slider-button--next" type="button">
+            <span class="visually-hidden">Вперед</span>
+            <svg width="11" height="20" fill="#7859cf">
+              <use href="./img/sprite.svg#icon-arrow-slider-right"></use>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -244,7 +260,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/beige-coffee-can.webp , img/beige-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/beige-coffee-can.webp 1x, img/beige-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/beige-coffee-can.png" srcset="img/beige-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с бежевой этикеткой.">
                   </picture>
                 </a>
@@ -262,7 +278,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/purple-coffee-can.webp , img/purple-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/purple-coffee-can.webp 1x, img/purple-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/purple-coffee-can.png" srcset="img/purple-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с фиолетовой этикеткой.">
                   </picture>
                 </a>
@@ -280,7 +296,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/black-coffee-can.webp , img/black-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/black-coffee-can.webp 1x, img/black-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/black-coffee-can.png" srcset="img/black-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с черной этикеткой.">
                   </picture>
                 </a>
@@ -298,7 +314,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/pink-coffee-can.webp , img/pink-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/pink-coffee-can.webp 1x, img/pink-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/pink-coffee-can.png" srcset="img/pink-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с розовой этикеткой.">
                   </picture>
                 </a>
@@ -316,7 +332,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/brown-coffee-can.webp , img/brown-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/brown-coffee-can.webp 1x, img/brown-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/brown-coffee-can.png" srcset="img/brown-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с коричневой этикеткой.">
                   </picture>
                 </a>
@@ -334,7 +350,7 @@
               <li class="product-cards__item card">
                 <a class="card__link-image" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/yellow-coffee-can.webp , img/yellow-coffee-can@2x.webp 2x">
+                    <source type="image/webp" srcset="img/yellow-coffee-can.webp 1x, img/yellow-coffee-can@2x.webp 2x">
                     <img class="card__image" src="img/yellow-coffee-can.png" srcset="img/yellow-coffee-can@2x.png" width="130" height="188" alt="Банка кофе с желтой этикеткой.">
                   </picture>
                 </a>
@@ -358,11 +374,11 @@
                   <svg width="6" height="10" fill="#7859cf">
                     <use href="./img/sprite.svg#icon-arrow-left"></use>
                   </svg>
-                  <span class="visually-hidden">Назад</span>
+                  <span class="pagination__button-text">Назад</span>
                 </button>
               </li>
               <li class="pagination__item">
-                <ol class="pagination__wrapper">
+                <ol class="pagination__container">
                   <li class="pagination__item">
                     <button class="pagination__button" type="button">1</button>
                   </li>
@@ -379,7 +395,7 @@
                   <svg width="6" height="10" fill="#7859cf">
                     <use href="./img/sprite.svg#icon-arrow-right"></use>
                   </svg>
-                  <span class="visually-hidden">Вперед</span>
+                  <span class="pagination__button-text">Вперед</span>
                 </button>
               </li>
             </ul>
@@ -396,14 +412,14 @@
     <footer class="main-footer">
       <section class="main-footer__social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
-        <a class="main-footer__logo">
-          <svg role="img" aria-label="Интернет-магазин кофейных напитков Дринк Ту Гоу">
+        <a class="main-footer__logo-link">
+          <svg role="img" width="82" height="36" aria-label="Интернет-магазин кофейных напитков Дринк Ту Гоу">
             <use class="main-footer__logo-image" href="./img/sprite.svg#logo-tablet"></use>
           </svg>
         </a>
-        <ul class="social-list">
+        <ul class="main-footer__social-list social-list">
           <li class="social-list__item">
-            <a class="social-list__link" href="#">
+            <a class="social-list__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
               <svg width="20" height="20" fill="#bdbdbd">
                 <use href="./img/sprite.svg#icon-vkontakte"></use>
@@ -411,16 +427,16 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="#">
+            <a class="social-list__link" href="https://ru.pinterest.com/keks_is_html_academy/">
               <span class="visually-hidden">Мы в Пинтерест</span>
-              <svg width="20" height="20" fill="#bdbdbd">
+              <svg width="22" height="22" fill="#bdbdbd">
                 <use href="./img/sprite.svg#icon-pinterest"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link" href="#">
-              <span class="visually-hidden">Мы в Пинтерест</span>
+            <a class="social-list__link" href="https://m.ok.ru/group/55557024251912">
+              <span class="visually-hidden">Мы в Одноклассниках</span>
               <svg width="20" height="20" fill="#bdbdbd">
                 <use href="./img/sprite.svg#icon-odnoklassniki"></use>
               </svg>
@@ -462,15 +478,16 @@
       <section class="main-footer__contacts">
         <h2 class="main-footer__title heading-primary">Контакты</h2>
         <address class="main-footer__address">
-          <p class="main-footer__address-text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+          <p class="main-footer__address-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
           <a class="main-footer__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
         </address>
       </section>
-      <section>
+      <section class="main-footer__copyright">
         <h2 class="visually-hidden">Авторские права</h2>
-        <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__text">разработано в HTML Academy</span>
-          <svg width="27" height="34" fill="#bdbdbd">
+        <p class="main-footer__copyright-text">Разработано в</p>
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="main-footer__copyright-text">HTML Academy</span>
+          <svg width="12" height="16" fill="#bdbdbd">
             <use href="./img/sprite.svg#icon-html-academy"></use>
           </svg>
         </a>
