@@ -241,8 +241,10 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="filters__button button" type="submit">Применить фильтр</button>
-              <button class="filters__button button--modified" type="reset">Сбросить фильтр</button>
+              <div class="filters__button-container">
+                <button class="filters__button button" type="submit">Применить фильтр</button>
+                <button class="filters__button button--modified" type="reset">Сбросить фильтр</button>
+              </div>
             </form>
           </section>
           <section class="main-catalog__products product-cards">
@@ -413,8 +415,9 @@
       <section class="main-footer__social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
         <a class="main-footer__logo-link">
-          <svg role="img" width="82" height="36" aria-label="Интернет-магазин кофейных напитков Дринк Ту Гоу">
-            <use class="main-footer__logo-image" href="./img/sprite.svg#logo-tablet"></use>
+          <svg role="img" aria-label="Интернет-магазин кофейных напитков Дринк Ту Гоу">
+            <use class="main-footer__logo-image main-footer__logo-image--tablet" href="./img/sprite.svg#logo-desktop"></use>
+            <use class="main-footer__logo-image main-footer__logo-image--mobile" href="./img/sprite.svg#logo-tablet"></use>
           </svg>
         </a>
         <ul class="main-footer__social-list social-list">
@@ -478,7 +481,7 @@
       <section class="main-footer__contacts">
         <h2 class="main-footer__title heading-primary">Контакты</h2>
         <address class="main-footer__address">
-          <p class="main-footer__address-text">Санкт-Петербург, набережная<br> реки Карповки, дом 5</p>
+          <p class="main-footer__address-text">Санкт-Петербург, набережная<br>&nbsp;реки Карповки, дом 5</p>
           <a class="main-footer__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
         </address>
       </section>

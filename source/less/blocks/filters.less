@@ -30,6 +30,10 @@
   list-style: none;
 }
 
+.filters__button-container {
+  text-align: center;
+}
+
 .filters__button {
   .align-center;
   width: 160px;
@@ -45,6 +49,7 @@
   .filters__form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
   }
 
   .filters__group,
@@ -52,9 +57,21 @@
     margin-bottom: 40px;
   }
 
+  .filters__button {
+    width: auto;
+    font-size: 14px;
+  }
+
   .filters__button,
   .filters__button:not(:last-of-type) {
-    grid-column: 0 / -1;
-    margin-bottom: 0;
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  .filters__button-container {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / -1;
+    padding-right: 20px;
   }
 }

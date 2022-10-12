@@ -62,8 +62,28 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 160px;
 }
 
 .pagination__button-text {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .pagination {
+    justify-content: right;
+  }
+
+  .pagination__button--prev,
+  .pagination__button--next {
+    width: 150px;
+  }
+
+  .pagination__button svg {
+    display: none;
+  }
+
+  .pagination__button-text {
+    display: inline-block;
+  }
 }

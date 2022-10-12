@@ -70,3 +70,26 @@
 .product-cards__item:not(:last-of-type) {
   margin-bottom: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .product-cards__select {
+    justify-content: right;
+    padding-bottom: 30px;
+  }
+
+  .product-cards__select-title {
+    margin-right: 10px;
+  }
+
+  .product-cards__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding-bottom: 70px;
+  }
+
+  .product-cards__item:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
