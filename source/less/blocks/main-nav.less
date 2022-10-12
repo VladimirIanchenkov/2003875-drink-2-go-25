@@ -5,9 +5,12 @@
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 180px;
+  z-index: 5;
 }
 
 .main-nav__toggle {
@@ -53,3 +56,18 @@
   top: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__container {
+    position: relative;
+    right: auto;
+  }
+}

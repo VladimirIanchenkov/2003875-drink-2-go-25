@@ -40,3 +40,21 @@
 .filters__button:not(:last-of-type) {
   margin-bottom: 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .filters__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .filters__group,
+  .filters__group:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  .filters__button,
+  .filters__button:not(:last-of-type) {
+    grid-column: 0 / -1;
+    margin-bottom: 0;
+  }
+}

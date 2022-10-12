@@ -37,3 +37,29 @@
 .main-header__logo-link:active {
   opacity: 0.6;
 }
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    .align-center;
+    display: flex;
+    justify-content: space-between;
+    width: 728px;
+  }
+
+  .main-header__container {
+    margin: 0;
+    width: auto;
+  }
+
+  .main-header__logo-link svg {
+    width: 82px;
+  }
+
+  .main-header__logo-image--mobile {
+    display: none;
+  }
+
+  .main-header__logo-image--tablet {
+    display: block;
+  }
+}

@@ -10,6 +10,8 @@
   position: absolute;
   height: 3px;
   background-color: #9070ec;
+  left: 12px;
+  width: 242px;
 }
 
 .range__toggle {
@@ -125,4 +127,18 @@
   width: 8px;
   height: 2px;
   background-color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .range {
+    width: 220px;
+  }
+
+  .range__bar {
+    width: 176px;
+  }
+
+  .range__input {
+    width: 92px;
+  }
 }
