@@ -39,6 +39,7 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  z-index: 5;
 }
 
 .main-nav__toggle:hover,
@@ -67,9 +68,10 @@
 
 .main-nav__container {
   display: flex;
+  justify-content: end;
   flex-wrap: wrap;
   position: absolute;
-  max-width: 180px;
+  max-width: 240px;
   right: calc((100% - 320px) / 2);
   top: 0;
 }
@@ -79,7 +81,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 80%;
-    max-width: 579px;
+    max-width: 580px;
   }
 
   .main-nav__list--site,

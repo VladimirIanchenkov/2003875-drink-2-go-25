@@ -1,12 +1,17 @@
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   list-style: none;
-  width: 160px;
+  min-width: 160px;
+}
+
+.social-list__item:not(:first-of-type) {
+  margin-left: 20px;
 }
 
 .social-list__link {
@@ -35,4 +40,11 @@
 
 .social-list__link:active svg {
   fill: @primary;
+}
+
+@media (min-width: @desktop-width) {
+  .social-list {
+    .align-left;
+    justify-content: flex-start;
+  }
 }
