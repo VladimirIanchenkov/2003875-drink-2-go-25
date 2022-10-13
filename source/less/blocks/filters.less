@@ -57,15 +57,18 @@
     margin-bottom: 40px;
   }
 
+  .filters__title {
+    margin-bottom: 20px;
+  }
+
   .filters__button {
     width: auto;
     font-size: 14px;
   }
 
-  .filters__button,
   .filters__button:not(:last-of-type) {
     margin: 0;
-    margin-right: 30px;
+    margin-right: 18px;
   }
 
   .filters__button-container {
@@ -73,5 +76,21 @@
     justify-content: center;
     grid-column: 1 / -1;
     padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters__form {
+    display: flex;
+    column-gap: unset;
+  }
+
+  .filters__group {
+    margin-bottom: 30px;
+  }
+
+  .filters__button-container {
+    justify-content: center;
+    padding-right: 0;
   }
 }
