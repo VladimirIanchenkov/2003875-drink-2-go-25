@@ -75,6 +75,18 @@
     justify-content: right;
   }
 
+  .pagination .pagination__item:nth-child(2) {
+    z-index: 1;
+  }
+
+  .pagination__button--prev {
+    margin-right: -10px;
+  }
+
+  .pagination__button--next {
+    margin-right: -23px;
+  }
+
   .pagination__button--prev,
   .pagination__button--next {
     width: 150px;
@@ -86,5 +98,9 @@
 
   .pagination__button-text {
     display: inline-block;
+  }
+
+  .pagination__container {
+    margin-right: -5px;
   }
 }
