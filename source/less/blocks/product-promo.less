@@ -80,6 +80,7 @@
   cursor: pointer;
   position: absolute;
   top: 0;
+  padding: 0;
 }
 
 .product-promo__slider-button--prev {
@@ -112,6 +113,10 @@
 
 .product-promo__slider-button:disabled svg {
   fill: @grey;
+}
+
+.product-promo__pagination {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -153,5 +158,102 @@
 
   .product-promo__slider-button {
     width: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-promo__card {
+    width: 1360px;
+    padding: 180px 0 242px 695px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .product-promo__image {
+    width: 600px;
+    height: 600px;
+    left: 65px;
+    top: 30px;
+    transform: none;
+  }
+
+  .product-promo__title {
+    text-align: left;
+  }
+
+  .product-promo__desription {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 625px;
+  }
+
+  .product-promo__container {
+    .align-left;
+  }
+
+  .product-promo__slider-button--prev {
+    left: -40px;
+  }
+
+  .product-promo__slider-button--next {
+    right: -40px;
+  }
+
+  .product-promo__pagination {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .product-promo__pagination-button:not(:last-of-type) {
+    margin-right: 8px;
+  }
+
+  .product-promo__pagination-button {
+    background: none;
+    border: none;
+    width: 62px;
+    height: 24px;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .product-promo__pagination-button::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: @white;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .product-promo__pagination-button:focus {
+    outline: none;
+  }
+
+  .product-promo__pagination-button:hover::after,
+  .product-promo__pagination-button:focus::after {
+    background-color: @primary;
+    opacity: 0.25;
+  }
+
+  .product-promo__pagination-button:active::after {
+    background-color: @primary;
+    opacity: 1;
+  }
+
+  .product-promo__pagination-button--current {
+    pointer-events: none;
+  }
+
+  .product-promo__pagination-button--current::after {
+    background-color: @primary;
+    opacity: 1;
   }
 }

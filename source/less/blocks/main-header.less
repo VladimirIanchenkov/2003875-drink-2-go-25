@@ -30,6 +30,10 @@
   display: none;
 }
 
+.main-header__logo-text {
+  display: none;
+}
+
 .main-header__logo-link:hover {
   opacity: 0.8;
 }
@@ -61,5 +65,31 @@
 
   .main-header__logo-image--tablet {
     display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    width: 1360px;
+  }
+
+  .main-header__logo-link svg {
+    width: 170px;
+  }
+
+  .main-header__logo-image--tablet {
+    display: none;
+  }
+
+  .main-header__logo-image--desktop {
+    display: block;
+  }
+
+  .main-header__logo-text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    width: 126px;
+    padding: 0 20px;
   }
 }

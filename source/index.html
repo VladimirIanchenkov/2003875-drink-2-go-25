@@ -24,6 +24,7 @@
             <use class="main-header__logo-image main-header__logo-image--tablet" href="./img/sprite.svg#logo-tablet"></use>
             <use class="main-header__logo-image main-header__logo-image--mobile" href="./img/sprite.svg#logo-mobile"></use>
           </svg>
+          <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
         </a>
       </div>
       <!-- Классы-модификаторы для .main-nav:
@@ -31,9 +32,9 @@
       opened открытое меню навигации, кнопка .main-nav__toggle имеет вид "крестика";
       nojs отображение меню навигации при отключенном Java Script, кнопка .main-nav__toggle скрыта.-->
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--current">Главная</a>
+        <ul class="main-nav__list main-nav__list--site site-list">
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">Каталог</a>
@@ -46,11 +47,11 @@
           </li>
         </ul>
         <div class="main-nav__container">
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list main-nav__list--user user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
                 <svg width="16" height="16" fill="#333333">
-                  <use class="user-list__icon-client" href="./img/sprite.svg#icon-client"></use>
+                  <use class="user-list__icon user-list__icon--client" href="./img/sprite.svg#icon-client"></use>
                 </svg>
                 <span class="user-list__link-text">Войти</span>
               </a>
@@ -58,7 +59,7 @@
             <li class="user-list__item">
               <a class="user-list__link" href="#">
                 <svg width="16" height="16" fill="#333333">
-                  <use class="user-list__icon-basket" href="./img/sprite.svg#icon-basket"></use>
+                  <use class="user-list__icon user-list__icon--basket" href="./img/sprite.svg#icon-basket"></use>
                 </svg>
                 <span class="user-list__link-text">Корзина</span>
               </a>
@@ -107,6 +108,11 @@
               <use href="./img/sprite.svg#icon-arrow-slider-right"></use>
             </svg>
           </button>
+          <div class="product-promo__pagination">
+            <button class="product-promo__pagination-button product-promo__pagination-button--current" type="button"></button>
+            <button class="product-promo__pagination-button" type="button"></button>
+            <button class="product-promo__pagination-button" type="button"></button>
+          </div>
         </div>
       </section>
 

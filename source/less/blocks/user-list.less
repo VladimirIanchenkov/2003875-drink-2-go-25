@@ -1,13 +1,12 @@
 .user-list {
   align-items: center;
+  flex-direction: row;
+  min-width: max-content;
 }
 
 .user-list__link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
@@ -15,6 +14,7 @@
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
+  padding: 22px;
 }
 
 .user-list__link:hover,
@@ -37,6 +37,37 @@
 
 @media (min-width: @tablet-width) {
   .user-list__link {
-    height: 80px;
+    padding: 32px 22px;
+  }
+
+  .user-list__link:active svg {
+    fill: @primary;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list__item:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  .user-list__link {
+    padding: 32px 20px;
+  }
+
+  .user-list__link svg {
+    margin-right: 8px;
+  }
+
+  .user-list__link-text {
+    display: inline-block;
+  }
+
+  .user-list__link:hover .user-list__link-text,
+  .user-list__link:focus .user-list__link-text {
+    color: @primary;
+  }
+
+  .user-list__link:active .user-list__link-text {
+    color: @primary;
   }
 }
