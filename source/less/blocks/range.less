@@ -11,7 +11,7 @@
   height: 3px;
   background-color: #9070ec;
   left: 12px;
-  width: 242px;
+  width: 236px;
 }
 
 .range__toggle {
@@ -83,8 +83,7 @@
 .range__input { /* stylelint-disable-line */
   box-sizing: border-box;
   width: 118px;
-  min-height: 38px;
-  padding: 8px 10px;
+  padding: 6px 10px;
   text-align: center;
   .montserrat-500;
   font-size: 16px;
@@ -132,6 +131,11 @@
 @media (min-width: @tablet-width) {
   .range {
     width: 220px;
+    margin-left: 7px;
+  }
+
+  .range__scale {
+    margin-bottom: 33px;
   }
 
   .range__bar {
@@ -145,7 +149,8 @@
 
 @media (min-width: @desktop-width) {
   .range {
-    width: 318px;
+    width: 317px;
+    margin-left: 0;
   }
 
   .range__bar {

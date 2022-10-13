@@ -46,7 +46,7 @@
   .site-list__item:first-child .site-list__link,
   .site-list__link {
     border: none;
-    padding: 32px 20px;
+    padding: 32px 21px;
     width: auto;
   }
 
@@ -62,5 +62,11 @@
     background-color: @primary;
     left: 0;
     bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    margin-right: 20px;
   }
 }

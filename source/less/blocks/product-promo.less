@@ -12,7 +12,7 @@
 }
 
 .product-promo__image {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .product-promo__sticker {
@@ -22,12 +22,19 @@
   text-transform: uppercase;
   color: @primary;
   margin-bottom: 4px;
+  display: block;
+  letter-spacing: 0.5px;
 }
 
 .product-promo__title {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.product-promo__white-space {
+  display: none;
 }
 
 .product-promo__desription {
@@ -57,7 +64,7 @@
   line-height: 32px;
   color: @primary;
   text-decoration: line-through;
-  margin-right: 6px;
+  margin-right: 10px;
 }
 
 .product-promo__new-price {
@@ -132,7 +139,7 @@
     width: 476px;
     height: 476px;
     left: 50%;
-    bottom: -30%;
+    bottom: -29%;
     transform: translate(-50%, 0);
   }
 
@@ -144,6 +151,10 @@
 
   .product-promo__title br {
     display: none;
+  }
+
+  .product-promo__white-space {
+    display: inline;
   }
 
   .product-promo__desription {

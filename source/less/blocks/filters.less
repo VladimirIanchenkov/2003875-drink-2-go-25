@@ -9,11 +9,11 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .filters__group:last-of-type {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 
 .filters__title {
@@ -21,7 +21,7 @@
   font-size: 16px;
   line-height: 24px;
   padding: 0;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .filters__list {
@@ -42,7 +42,7 @@
 }
 
 .filters__button:not(:last-of-type) {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -64,18 +64,19 @@
   .filters__button {
     width: auto;
     font-size: 14px;
+    margin: 0;
   }
 
   .filters__button:not(:last-of-type) {
     margin: 0;
-    margin-right: 18px;
+    margin-right: 30px;
   }
 
   .filters__button-container {
     display: flex;
     justify-content: center;
     grid-column: 1 / -1;
-    padding-right: 20px;
+    padding-right: 52px;
   }
 }
 
@@ -92,5 +93,14 @@
   .filters__button-container {
     justify-content: center;
     padding-right: 0;
+  }
+
+  .filters__button:not(:last-of-type) {
+    margin-right: 18px;
+  }
+
+  .filters__button {
+    min-width: 150px;
+    width: max-content;
   }
 }
