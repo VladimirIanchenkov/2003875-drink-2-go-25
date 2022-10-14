@@ -6,6 +6,8 @@ const DEFAULT_SCALE = 18.5;
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const mapContainer = document.querySelector('.map__canvas');
+const productCard = document.querySelector('.product-promo__card');
+const productCardButton = document.querySelector('.product-promo__slider-button');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -52,3 +54,21 @@ const mainPinMarker = L.marker(
 )
 
 mainPinMarker.addTo(map);
+
+new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+productCard.classList.remove('.product-promo__card--nojs');
+productCardButton.classList.remove('.product-promo__slider-button--nojs');

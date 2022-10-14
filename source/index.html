@@ -11,6 +11,7 @@
     <link rel="preload" href="./fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="img/flat-white-mobile@2x.png" as="image">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="./leaflet/leaflet.css">
     <link rel="icon" href="favicon.ico">
@@ -35,7 +36,7 @@
       closed закрытое меню навигации, кнопка .main-nav__toggle имеет вид "гамбургера";
       opened открытое меню навигации, кнопка .main-nav__toggle имеет вид "крестика";
       nojs отображение меню навигации при отключенном Java Script, кнопка .main-nav__toggle скрыта.-->
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <ul class="main-nav__list main-nav__list--site site-list">
           <li class="site-list__item site-list__item--current">
             <a class="site-list__link">Главная</a>
@@ -81,41 +82,98 @@
 
       <section class="product-promo">
         <h2 class="visually-hidden">Промо-слайдер</h2>
-        <div class="product-promo__card">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x">
-            <img class="product-promo__image" src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт с натуральным фермерским молоком.">
-          </picture>
-          <span class="product-promo__sticker">Новинка!</span>
-          <h3 class="product-promo__title heading-secondary">Декаф Флэт<br><span class="product-promo__title-white-space">&nbsp;</span>Уайт</h3>
-          <p class="product-promo__desription">Свежесваренный кофе без кофеина из Эфиопии<br><span class="product-promo__desription-white-space">&nbsp;</span>с натуральным фермерским молоком — то, что нужно<br><span class="product-promo__desription-white-space">&nbsp;</span>для расслабления после тяжёлого рабочего дня</p>
-          <div class="product-promo__container">
-            <div class="product-promo__container-inner">
-              <span class="product-promo__old-price">295₽</span>
-              <span class="product-promo__new-price">225₽</span>
+
+        <div class="product-promo__slider swiper">
+          <div class="product-promo__slider-container swiper-wrapper">
+            <div class="product-promo__card-container swiper-slide">
+              <div class="product-promo__card">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/flat-white-mobile.webp 1x, img/flat-white-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/flat-white-desktop.png 1x, img/flat-white-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/flat-white-tablet.png 1x, img/flat-white-tablet@2x.png 2x">
+                  <img class="product-promo__image" src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт с натуральным фермерским молоком.">
+                </picture>
+                <span class="product-promo__sticker">Новинка!</span>
+                <h3 class="product-promo__title heading-secondary">Декаф Флэт<br><span class="product-promo__title-white-space">&nbsp;</span>Уайт</h3>
+                <p class="product-promo__desription">Свежесваренный кофе без кофеина из Эфиопии<br>
+                  <span class="product-promo__desription-white-space">&nbsp;</span>с натуральным фермерским молоком — то, что нужно<br>
+                  <span class="product-promo__desription-white-space">&nbsp;</span>для расслабления после тяжёлого рабочего дня</p>
+                <div class="product-promo__container">
+                  <div class="product-promo__container-inner">
+                    <span class="product-promo__old-price">295₽</span>
+                    <span class="product-promo__new-price">225₽</span>
+                  </div>
+                  <a class="product-promo__button button" href="#">Заказать</a>
+                </div>
+              </div>
             </div>
-            <a class="product-promo__button button" href="#">Заказать</a>
+            <div class="product-promo__card-container swiper-slide">
+              <div class="product-promo__card product-promo__card--nojs">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/lavender-desktop.webp 1x, img/lavender-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/lavender-tablet.webp 1x, img/lavender-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/lavender-mobile.webp 1x, img/lavender-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/lavender-desktop.png 1x, img/lavender-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/lavender-tablet.png 1x, img/lavender-tablet@2x.png 2x">
+                  <img class="product-promo__image" src="img/lavender-mobile.png" srcset="img/lavender-mobile@2x.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт с натуральным фермерским молоком.">
+                </picture>
+                <span class="product-promo__sticker">Новинка!</span>
+                <h3 class="product-promo__title heading-secondary">Лавандовый Латте</h3>
+                <p class="product-promo__desription">Невероятное сочетание перуанской высокогорной<br>
+                  <span class="product-promo__desription-white-space">&nbsp;</span>арабики с молоком ламы и лавандовым сиропом унесёт<br>
+                  <span class="product-promo__desription-white-space">&nbsp;</span>вас прямо на вершину Радужных гор</p>
+                <div class="product-promo__container">
+                  <div class="product-promo__container-inner">
+                    <span class="product-promo__old-price">295₽</span>
+                    <span class="product-promo__new-price">225₽</span>
+                  </div>
+                  <a class="product-promo__button button" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-promo__card-container swiper-slide">
+              <div class="product-promo__card product-promo__card--nojs">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/espresso-desktop.webp 1x, img/espresso-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/espresso-tablet.webp 1x, img/espresso-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/espresso-mobile.webp 1x, img/espresso-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/espresso-desktop.png 1x, img/espresso-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/espresso-tablet.png 1x, img/espresso-tablet@2x.png 2x">
+                  <img class="product-promo__image" src="img/espresso-mobile.png" srcset="img/espresso-mobile@2x.png" width="280" height="280" alt="Банка кофе Декаф Флэт Уайт с натуральным фермерским молоком.">
+                </picture>
+                <span class="product-promo__sticker">Новинка!</span>
+                <h3 class="product-promo__title heading-secondary">Тройной Эспрессо</h3>
+                <p class="product-promo__desription">Мощнее укола адреналина, чернее самой тёмной ночи,<br>
+                  <span class="product-promo__desription-white-space">&nbsp;</span>этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="product-promo__container">
+                  <div class="product-promo__container-inner">
+                    <span class="product-promo__old-price">295₽</span>
+                    <span class="product-promo__new-price">225₽</span>
+                  </div>
+                  <a class="product-promo__button button" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <button class="product-promo__slider-button product-promo__slider-button--prev" type="button">
-            <span class="visually-hidden">Назад</span>
-            <svg width="11" height="20" fill="#7859cf">
-              <use href="./img/sprite.svg#icon-arrow-slider-left"></use>
-            </svg>
-          </button>
-          <button class="product-promo__slider-button product-promo__slider-button--next" type="button">
-            <span class="visually-hidden">Вперед</span>
-            <svg width="11" height="20" fill="#7859cf">
-              <use href="./img/sprite.svg#icon-arrow-slider-right"></use>
-            </svg>
-          </button>
-          <div class="product-promo__pagination">
-            <button class="product-promo__pagination-button product-promo__pagination-button--current" type="button"></button>
-            <button class="product-promo__pagination-button" type="button"></button>
-            <button class="product-promo__pagination-button" type="button"></button>
+          <div class="product-promo__pagination swiper-pagination"></div>
+          <div class="product-promo__slider-button-container swiper-button-prev">
+            <button class="product-promo__slider-button product-promo__slider-button--prev product-promo__slider-button--nojs" type="button">
+              <span class="visually-hidden">Назад</span>
+              <svg width="11" height="20" fill="#7859cf">
+                <use href="./img/sprite.svg#icon-arrow-slider-left"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="product-promo__slider-button-container swiper-button-next">
+            <button class="product-promo__slider-button product-promo__slider-button--next product-promo__slider-button--nojs" type="button">
+              <span class="visually-hidden">Вперед</span>
+              <svg width="11" height="20" fill="#7859cf">
+                <use href="./img/sprite.svg#icon-arrow-slider-right"></use>
+              </svg>
+            </button>
+          </div>
           </div>
         </div>
       </section>
@@ -509,6 +567,7 @@
         </a>
       </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./leaflet/leaflet.js"></script>
     <script src="js/script.min.js"></script>
   </body>
