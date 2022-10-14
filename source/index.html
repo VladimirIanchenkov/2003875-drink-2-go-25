@@ -12,6 +12,7 @@
     <link rel="preload" href="./fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="img/flat-white-mobile@2x.png" as="image">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./leaflet/leaflet.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicons/apple.png">
@@ -253,7 +254,7 @@
                 </fieldset>
                 <div class="filters__button-container">
                   <button class="filters__button button" type="submit">Применить фильтр</button>
-                  <button class="filters__button button--modified" type="reset">Сбросить фильтр</button>
+                  <button class="filters__button button button--modified" type="reset">Сбросить фильтр</button>
                 </div>
               </form>
             </section>
@@ -418,7 +419,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-
+        <div class="map__canvas" id="map-canvas"></div>
       </section>
     </main>
 
@@ -508,6 +509,7 @@
         </a>
       </section>
     </footer>
+    <script src="./leaflet/leaflet.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

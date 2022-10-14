@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-htmlacademy",
+  "ignoreFiles": ["build/leaflet/**/*.*"],
 
   "rules": {
     "declaration-no-important": true,
