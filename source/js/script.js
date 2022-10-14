@@ -5,6 +5,7 @@ const PIN_LONGITUDE = 30.31762;
 const DEFAULT_SCALE = 18.5;
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
+const mapContainer = document.querySelector('.map__canvas');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -17,6 +18,8 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+mapContainer.classList.remove('map__canvas--nojs');
 
 const map = L.map('map-canvas')
   .setView({
