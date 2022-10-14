@@ -7,9 +7,10 @@ const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const mapContainer = document.querySelector('.map__canvas');
 const productCard = document.querySelector('.product-promo__card');
-const productCardButton = document.querySelector('.product-promo__slider-button');
 
 navMain.classList.remove('main-nav--nojs');
+navMain.classList.remove('main-nav--opened');
+navMain.classList.add('main-nav--closed');
 
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -55,6 +56,8 @@ const mainPinMarker = L.marker(
 
 mainPinMarker.addTo(map);
 
+productCard.classList.remove('.product-promo__card--nojs');
+
 new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
@@ -70,5 +73,3 @@ new Swiper('.swiper', {
   },
 });
 
-productCard.classList.remove('.product-promo__card--nojs');
-productCardButton.classList.remove('.product-promo__slider-button--nojs');

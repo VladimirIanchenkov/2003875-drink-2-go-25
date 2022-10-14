@@ -7,6 +7,10 @@
   height: 100%;
 }
 
+.product-promo__card--nojs {
+  display: none;
+}
+
 .product-promo__card {
   .align-center;
   width: 280px;
@@ -14,10 +18,7 @@
   padding-top: 20px;
   padding-bottom: 60px;
   position: relative;
-}
-
-.product-promo__card--nojs {
-  display: none;
+  display: block;
 }
 
 .product-promo__image {
@@ -110,20 +111,8 @@
   padding: 0;
 }
 
-.product-promo__slider-button--nojs {
-  display: none;
-}
-
 .product-promo__slider-button::after {
   display: none;
-}
-
-.product-promo__slider-button--prev {
-  left: -20px;
-}
-
-.product-promo__slider-button--next {
-  right: -20px;
 }
 
 .product-promo__slider-button--prev:hover,
@@ -217,6 +206,14 @@
   .product-promo__slider-button {
     width: 80px;
     height: 77%;
+  }
+
+  .product-promo__slider-button--prev {
+    padding-right: 20px;
+  }
+
+  .product-promo__slider-button--next {
+    padding-left: 20px;
   }
 }
 

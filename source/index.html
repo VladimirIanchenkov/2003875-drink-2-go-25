@@ -110,6 +110,7 @@
               </div>
             </div>
             <div class="product-promo__card-container swiper-slide">
+              <!-- Класс-модификатор .product-promo__card--nojs скрывает карточки в слайдер при отключенном Java Script. -->
               <div class="product-promo__card product-promo__card--nojs">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/lavender-desktop.webp 1x, img/lavender-desktop@2x.webp 2x">
@@ -159,7 +160,7 @@
           </div>
           <div class="product-promo__pagination swiper-pagination"></div>
           <div class="product-promo__slider-button-container swiper-button-prev">
-            <button class="product-promo__slider-button product-promo__slider-button--prev product-promo__slider-button--nojs" type="button">
+            <button class="product-promo__slider-button product-promo__slider-button--prev" type="button">
               <span class="visually-hidden">Назад</span>
               <svg width="11" height="20" fill="#7859cf">
                 <use href="./img/sprite.svg#icon-arrow-slider-left"></use>
@@ -167,7 +168,7 @@
             </button>
           </div>
           <div class="product-promo__slider-button-container swiper-button-next">
-            <button class="product-promo__slider-button product-promo__slider-button--next product-promo__slider-button--nojs" type="button">
+            <button class="product-promo__slider-button product-promo__slider-button--next" type="button">
               <span class="visually-hidden">Вперед</span>
               <svg width="11" height="20" fill="#7859cf">
                 <use href="./img/sprite.svg#icon-arrow-slider-right"></use>
@@ -217,7 +218,7 @@
                   <legend class="filters__title">Цена</legend>
                   <div class="filters__range range">
 
-                    <!-- Добавление класса-модификатора range__scale--disabled к range__scale переводит слайдер в некативное состояние-->
+                    <!-- Добавление класса-модификатора range__scale--disabled к range__scale переводит слайдер в неактивное состояние-->
                     <div class="range__scale">
                       <div class="range__bar">
                         <button class="range__toggle range__toggle--min" type="button">
@@ -477,6 +478,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
+        <!-- Класс-модификатор .map__canvas--nojs показывает статичное изображение карты и пин-метки при отключенном Java Script. -->
         <div class="map__canvas map__canvas--nojs" id="map-canvas"></div>
       </section>
     </main>
