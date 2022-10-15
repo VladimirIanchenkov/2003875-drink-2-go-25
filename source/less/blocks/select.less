@@ -1,4 +1,4 @@
-.select {
+.select__control {
   display: none;
   opacity: 0;
   position: absolute;
@@ -6,8 +6,7 @@
   width: 1px;
 }
 
-.select-wrap {
-  margin-left: auto;
+.select {
   max-width: 280px;
   position: relative;
   display: flex;
@@ -16,18 +15,20 @@
   justify-content: space-between;
 }
 
-.custom-select {
+.select__title {
+  .montserrat-600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.select__control-custom {
   width: max-content;
   position: relative;
   border-radius: 4px;
 }
 
-.custom-select:focus,
-.custom-select:hover {
-  background-color: #f0ebff;
-}
-
-.custom-select__current {
+.select__control-custom--current {
   .montserrat-600;
   font-size: 16px;
   line-height: 24px;
@@ -40,7 +41,7 @@
   cursor: pointer;
 }
 
-.custom-select__current::after {
+.select__control-custom--current::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -53,19 +54,24 @@
   background-position: 94% center;
 }
 
-.custom-select--show .custom-select__current::after {
+.select__control-custom--shown .select__control-custom--current::after {
   transform: rotate(-180deg);
   top: 40%;
 }
 
-.custom-select--show .custom-select__list {
+.select__control-custom--current:focus,
+.select__control-custom--current:hover {
+  background-color: #f0ebff;
+}
+
+.select__control-custom--shown .select__control-custom-list {
   margin-top: 10px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.custom-select__list {
+.select__control-custom-list {
   width: max-content;
   position: absolute;
   right: 0;
@@ -82,7 +88,7 @@
   max-width: 190px;
 }
 
-.custom-select__item {
+.select__control-custom-item {
   padding: 8px 15px 8px 20px;
   cursor: pointer;
   background-color: @white;
@@ -92,33 +98,51 @@
   box-sizing: border-box;
   font-size: 16px;
   line-height: 24px;
+  text-transform: lowercase;
 }
 
-.custom-select__item:not(:last-of-type) {
+.select__control-custom-item:not(:last-of-type) {
   border-bottom: 1px solid #f0ebff;
 }
 
-.custom-select__item:hover,
-.custom-select__item:focus {
+.select__control-custom-item:hover,
+.select__control-custom-item:focus {
   background-color: #f0ebff;
 }
 
-.active,
-.custom-select__item:active {
+.select__control-custom-item--active:hover,
+.select__control-custom-item--active:focus {
   background-color: @primary;
   color: @white;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
+.select__control-custom-item--active,
+.select__control-custom-item:active {
+  background-color: @primary;
+  color: @white;
+}
+
+.select__control-custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
+.select__control-custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #e2e2e2;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  border: 2px solid #f8f9fa;
-  background-color: #cccccc;
+.select__control-custom-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid #e2e2e2;
+  background-color: @grey;
   border-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .select {
+    .align-right;
+    max-width: 100%;
+  }
+
+  .select__title {
+    margin-right: 10px;
+  }
 }

@@ -80,7 +80,7 @@ new Swiper('.swiper', {
 // Источник заимствования: https://codepen.io/leon9208/pen/VwYpJwW
 
 //Получаем все "select" по селектору
-const selects = document.querySelectorAll('.select')
+const selects = document.querySelectorAll('.select__control')
 //переборка по полученным "select"
 for (let i = 0; i < selects.length; i++){
 	const select = selects[i]
@@ -94,9 +94,9 @@ for (let i = 0; i < selects.length; i++){
 
 	// select.setAttribute('tabindex', '1')
 	//задаем классы и атрибуты кастомному "select"
-	customSelect.className = 'custom-select'
-	customSelectList.className = 'custom-select__list custom-scrollbar'
-	customSelectCurrent.className = 'custom-select__current'
+	customSelect.className = 'select__control-custom'
+	customSelectList.className = 'select__control-custom-list select__control-custom-scrollbar'
+	customSelectCurrent.className = 'select__control-custom--current'
 
 	//создаем вложенность созданных элементов
 	customSelect.append(customSelectCurrent, customSelectList)
@@ -109,14 +109,14 @@ for (let i = 0; i < selects.length; i++){
 		let selectItems = ''
 
 		for(let i = 0; i < options.length; i++){
-			selectItems += '<div class="custom-select__item" data-value="'+options[i].value+'">'+options[i].text+'</div>'
+			selectItems += '<div class="select__control-custom-item" data-value="'+options[i].value+'">'+options[i].text+'</div>'
 		}
 		customSelectList.innerHTML = selectItems
 		x(),y();
 	}
 
 	//открываем-закрываем выпадающий список по клику
-	const toggleClass = () => {customSelect.classList.toggle('custom-select--show')}
+	const toggleClass = () => {customSelect.classList.toggle('select__control-custom--shown')}
 
 	//присваиваем текстовое первое значение "option" в кастомном "select"
 	const currentTextValue = () => customSelectCurrent.textContent = customSelectList.children[0].textContent
@@ -127,58 +127,31 @@ for (let i = 0; i < selects.length; i++){
 		for(let el = 0; el < items.length; el++){
 			let selectValue = items[el].getAttribute('data-value')
 			let selectText = items[el].textContent
+      items[0].classList.add('select__control-custom-item--active')
       items[el].addEventListener('click', () => {
         for(let i = 0; i < items.length; i++)
-        if (items[i].classList.contains('active')) {
-          items[i].classList.remove('active')
+        if (items[i].classList.contains('select__control-custom-item--active')) {
+          items[i].classList.remove('select__control-custom-item--active')
         }
-        customSelect.classList.remove('custom-select--show')
+        customSelect.classList.remove('select__control-custom--shown')
         customSelectCurrent.textContent = selectText
-        items[el].classList.add('active')
+        items[el].classList.add('select__control-custom-item--active')
 				select.value = selectValue
 			})
 		}
 	}
 
-
-
-	const desktopFn = () => {
+	const renderSelect = () => {
 		customSelectCurrent.addEventListener('click', toggleClass)
-	}
-
-	const mobileFn = () => {
-		for(let j = 0; j < selects.length; j++){
-			let mobileSelect = selects[j]
-			mobileSelect.addEventListener('change', ()=> {
-				mobileSelect.nextElementSibling.querySelector('.custom-select__current').textContent = mobileSelect.value
-			})
-		}
 	}
 
 	createCustomDom(currentTextValue, currentValue)
 
-
 	//закрываем выпадающий список по клику вне области кастомного селекта
 	document.addEventListener('mouseup', (e) =>{
-    if (!customSelect.contains(e.target))	customSelect.classList.remove('custom-select--show')
+    if (!customSelect.contains(e.target))	customSelect.classList.remove('select__control-custom--shown')
 	})
 
-	detectMobile(mobileFn, desktopFn)
-
-	function detectMobile(x,y) {
-		if( navigator.userAgent.match(/Android/i)
-		|| navigator.userAgent.match(/webOS/i)
-		|| navigator.userAgent.match(/iPhone/i)
-		|| navigator.userAgent.match(/iPad/i)
-		|| navigator.userAgent.match(/iPod/i)
-		|| navigator.userAgent.match(/BlackBerry/i)
-		|| navigator.userAgent.match(/Windows Phone/i)
-		){
-			x();
-		}
-		else {
-			y();
-		 }
-	 }
+  renderSelect();
 }
 
