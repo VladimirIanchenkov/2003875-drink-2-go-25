@@ -160,7 +160,7 @@
           </div>
           <div class="product-promo__pagination swiper-pagination"></div>
           <div class="product-promo__slider-button-container swiper-button-prev">
-            <button class="product-promo__slider-button product-promo__slider-button--prev" type="button">
+            <button class="product-promo__slider-button product-promo__slider-button--prev nojs" type="button">
               <span class="visually-hidden">Назад</span>
               <svg width="11" height="20" fill="#7859cf">
                 <use href="./img/sprite.svg#icon-arrow-slider-left"></use>
@@ -328,6 +328,19 @@
                   <option class="product-cards__select-option" value="popular">Высокий рейтинг</option>
                 </select>
               </div>
+
+
+              <div class="select-wrap">
+                <h3 class="product-cards__select-title">Сортировка:</h3>
+                <select class="select" name="select">
+                  <option value="default">По умолчанию</option>
+                  <option value="price-high">Сначала дорогие</option>
+                  <option value="price-low">Сначала дешевые</option>
+                  <option value="popular">Высокий рейтинг</option>
+                </select>
+              </div>
+
+
               <ul class="product-cards__list">
                 <li class="product-cards__item card">
                   <a class="card__link-image" href="#">

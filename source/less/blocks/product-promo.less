@@ -95,14 +95,15 @@
 }
 
 .product-promo__slider-button-container {
+  display: block;
   width: auto;
   height: 100%;
   margin-top: 0;
   top: 0;
-  outline: none;
 }
 
 .product-promo__slider-button {
+  display: block;
   border: none;
   background: none;
   width: 20px;
@@ -117,13 +118,11 @@
 
 .product-promo__slider-button--prev:hover,
 .product-promo__slider-button--prev:focus {
-  outline: none;
   background: linear-gradient(90deg, #ffffff 0%, #ffffff00 100%);
 }
 
 .product-promo__slider-button--next:hover,
 .product-promo__slider-button--next:focus {
-  outline: none;
   background: linear-gradient(90deg, #ffffff00 0%, #ffffff 100%);
 }
 
@@ -203,9 +202,12 @@
     display: block;
   }
 
+  .product-promo__slider-button-container {
+    height: 77%;
+  }
+
   .product-promo__slider-button {
     width: 80px;
-    height: 77%;
   }
 
   .product-promo__slider-button--prev {

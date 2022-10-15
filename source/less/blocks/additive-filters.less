@@ -31,12 +31,15 @@
   background-color: @primary;
   opacity: 0.25;
   border-radius: 50%;
-  outline: none;
 }
 
 .additive-filters__control-input:hover + .additive-filters__control-mark,
 .additive-filters__control-input:focus + .additive-filters__control-mark {
   border-color: #9070ec;
+}
+
+.additive-filters__control-input:focus-visible + .additive-filters__control-mark {
+  outline: 1px solid #000000;
 }
 
 .additive-filters__control-input:checked + .additive-filters__control-mark {
