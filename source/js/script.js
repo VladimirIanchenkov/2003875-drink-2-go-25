@@ -7,6 +7,7 @@ const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const mapContainer = document.querySelector('.map__canvas');
 const productCard = document.querySelector('.product-promo__card');
+const selectControl = document.querySelector('.select__control');
 
 // Реализация выпадающего меню
 navMain.classList.remove('main-nav--nojs');
@@ -77,6 +78,13 @@ new Swiper('.swiper', {
 });
 
 // Реализация кастомного select
+
+selectControl.style.display = 'none';
+selectControl.style.opacity = 0;
+selectControl.style.position = 'absolute';
+selectControl.style.height = 1;
+selectControl.style.width = 1;
+
 // Источник заимствования: https://codepen.io/leon9208/pen/VwYpJwW
 
 //Получаем все "select" по селектору
