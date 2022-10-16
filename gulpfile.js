@@ -35,7 +35,7 @@ const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
-  }
+}
 
 // Scripts
 
@@ -76,7 +76,7 @@ const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
-  }
+}
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')

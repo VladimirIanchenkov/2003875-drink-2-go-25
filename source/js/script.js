@@ -90,76 +90,75 @@ selectControl.style.width = 1;
 //Получаем все "select" по селектору
 const selects = document.querySelectorAll('.select__control')
 //переборка по полученным "select"
-for (let i = 0; i < selects.length; i++){
-	const select = selects[i]
-	//получаем все "option" внутри "select"
-	const options = select.querySelectorAll('option')
+for (let i = 0; i < selects.length; i++) {
+const select = selects[i]
+//получаем все "option" внутри "select"
+const options = select.querySelectorAll('option')
 
-	//создаем кастомный "select"
-	const customSelect = document.createElement('div')
-	const customSelectList = document.createElement('div')
-	const customSelectCurrent = document.createElement('div')
+//создаем кастомный "select"
+const customSelect = document.createElement('div')
+const customSelectList = document.createElement('div')
+const customSelectCurrent = document.createElement('div')
 
-	// select.setAttribute('tabindex', '1')
-	//задаем классы и атрибуты кастомному "select"
-	customSelect.className = 'select__control-custom'
-	customSelectList.className = 'select__control-custom-list select__control-custom-scrollbar'
-	customSelectCurrent.className = 'select__control-custom--current'
+// select.setAttribute('tabindex', '1')
+//задаем классы и атрибуты кастомному "select"
+customSelect.className = 'select__control-custom'
+customSelectList.className = 'select__control-custom-list select__control-custom-scrollbar'
+customSelectCurrent.className = 'select__control-custom--current'
 
-	//создаем вложенность созданных элементов
-	customSelect.append(customSelectCurrent, customSelectList)
+//создаем вложенность созданных элементов
+customSelect.append(customSelectCurrent, customSelectList)
 
-	//добавляем кастомный "select" сразу после оргинального "select"
-	select.after(customSelect)
+//добавляем кастомный "select" сразу после оргинального "select"
+select.after(customSelect)
 
-	//получаем список и значения "option" из "select", затем создаём кастомный "option" для кастомного "select"
-	const createCustomDom = (x, y) => {
-		let selectItems = ''
+//получаем список и значения "option" из "select", затем создаём кастомный "option" для кастомного "select"
+const createCustomDom = (x, y) => {
+  let selectItems = ''
 
-		for(let i = 0; i < options.length; i++){
-			selectItems += '<div class="select__control-custom-item" data-value="'+options[i].value+'">'+options[i].text+'</div>'
-		}
-		customSelectList.innerHTML = selectItems
-		x(),y();
-	}
-
-	//открываем-закрываем выпадающий список по клику
-	const toggleClass = () => {customSelect.classList.toggle('select__control-custom--shown')}
-
-	//присваиваем текстовое первое значение "option" в кастомном "select"
-	const currentTextValue = () => customSelectCurrent.textContent = customSelectList.children[0].textContent
-
-	//получаем и задаем значения text/value
-	const currentValue = () => {
-		const items = customSelectList.children
-		for(let el = 0; el < items.length; el++){
-			let selectValue = items[el].getAttribute('data-value')
-			let selectText = items[el].textContent
-      items[0].classList.add('select__control-custom-item--active')
-      items[el].addEventListener('click', () => {
-        for(let i = 0; i < items.length; i++)
-        if (items[i].classList.contains('select__control-custom-item--active')) {
-          items[i].classList.remove('select__control-custom-item--active')
-        }
-        customSelect.classList.remove('select__control-custom--shown')
-        customSelectCurrent.textContent = selectText
-        items[el].classList.add('select__control-custom-item--active')
-				select.value = selectValue
-			})
-		}
-	}
-
-	const renderSelect = () => {
-		customSelectCurrent.addEventListener('click', toggleClass)
-	}
-
-	createCustomDom(currentTextValue, currentValue)
-
-	//закрываем выпадающий список по клику вне области кастомного селекта
-	document.addEventListener('mouseup', (e) =>{
-    if (!customSelect.contains(e.target))	customSelect.classList.remove('select__control-custom--shown')
-	})
-
-  renderSelect();
+  for(let i = 0; i < options.length; i++){
+  selectItems += '<div class="select__control-custom-item" data-value="'+options[i].value+'">'+options[i].text+'</div>'
+  }
+  customSelectList.innerHTML = selectItems
+  x(),y();
 }
 
+//открываем-закрываем выпадающий список по клику
+const toggleClass = () => {customSelect.classList.toggle('select__control-custom--shown')}
+
+//присваиваем текстовое первое значение "option" в кастомном "select"
+const currentTextValue = () => customSelectCurrent.textContent = customSelectList.children[0].textContent
+
+//получаем и задаем значения text/value
+const currentValue = () => {
+  const items = customSelectList.children
+  for(let el = 0; el < items.length; el++){
+  let selectValue = items[el].getAttribute('data-value')
+  let selectText = items[el].textContent
+  items[0].classList.add('select__control-custom-item--active')
+  items[el].addEventListener('click', () => {
+    for(let i = 0; i < items.length; i++)
+    if (items[i].classList.contains('select__control-custom-item--active')) {
+      items[i].classList.remove('select__control-custom-item--active')
+    }
+    customSelect.classList.remove('select__control-custom--shown')
+    customSelectCurrent.textContent = selectText
+    items[el].classList.add('select__control-custom-item--active')
+    select.value = selectValue
+  })
+  }
+}
+
+const renderSelect = () => {
+  customSelectCurrent.addEventListener('click', toggleClass)
+}
+
+createCustomDom(currentTextValue, currentValue)
+
+//закрываем выпадающий список по клику вне области кастомного селекта
+document.addEventListener('mouseup', (e) =>{
+  if (!customSelect.contains(e.target))	customSelect.classList.remove('select__control-custom--shown')
+})
+
+renderSelect();
+}
